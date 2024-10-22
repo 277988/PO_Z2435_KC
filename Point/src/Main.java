@@ -35,29 +35,7 @@ public class Main {
 
         public double distanceY(Point a, Point b) {
             return Math.abs(b.getY() - a.getY());
-        }
 
-        public boolean isSquare(Point p1, Point p2, Point p3, Point p4) {
-            double d2 = distance(p1, p2);
-            double d3 = distance(p1, p3);
-            double d4 = distance(p1, p4);
-
-            if (d2 == d3 && 2 * d2 == d4) {
-                double d = distance(p2, p4);
-                return d == distance(p3, p4) && d == d2;
-            }
-
-            if (d2 == d4 && 2 * d2 == d3) {
-                double d = distance(p2, p3);
-                return d == distance(p3, p4) && d == d2;
-            }
-
-            if (d3 == d4 && 2 * d3 == d2) {
-                double d = distance(p2, p3);
-                return d == distance(p2, p4) && d == d3;
-            }
-
-            return false;
         }
     }
 
@@ -82,21 +60,11 @@ public class Main {
             return Math.PI * diameter;
         }
     }
-
-
     public static void main(String[] args) {
         Point p1 = new Point(2, 5);
-        Point p2 = new Point(5, 5);
-        Point p3 = new Point(2, 5);
-        Point p4 = new Point(5, 2);
 
-        Calculator calc = new Calculator();
-        System.out.println("Odległość między p1 a p2: " + calc.distance(p1, p2));
-
-        Circle circle = new Circle(p1, 4);
+        Circle circle = new Circle(p1,  4);
         System.out.println("Pole koła: " + circle.area());
         System.out.println("Obwód koła: " + circle.circumference());
     }
 }
-
-

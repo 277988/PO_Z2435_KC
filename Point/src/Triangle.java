@@ -9,12 +9,12 @@ public class Triangle extends Shape {
         this.side3 = side3;
     }
 
-    @Override
+
     public double area() {
         return (base * height) / 2;
     }
 
-    @Override
+
     public double circumference() {
         return side1 + side2 + side3;
     }
